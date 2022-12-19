@@ -22,12 +22,12 @@ const Button = ({
   children,
 }) => {
   const classname = `
-  ${styles.base} 
+  ${styles["base"]}
   ${styles[size]} 
   ${styles[type]} 
   ${styles[color]} 
-  ${styles[shadow ? "shadow" : ""]}
-  ${disabled ? styles.disabled : ""}
+  ${styles[shadow ? "shadow" : ""]} 
+  ${disabled ? styles["disabled"] : ""}
   `;
   return (
     //pass button attributes

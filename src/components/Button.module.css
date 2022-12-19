@@ -45,11 +45,10 @@
   border: none;
   text-align: center;
   display: inline-block;
-  cursor: pointer;
   border-radius: 8px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  margin: 4px;
+  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,11 +80,12 @@
   font-size: 18px;
 }
 
-.primary.default {
+.primary.default:not(.disabled) {
   background-color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
   color: var(--primary-text);
 }
-.primary:hover.default {
+.primary:hover.default:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--primary-h),
     var(--primary-s),
@@ -93,13 +93,14 @@
   );
 }
 
-.primary.outline {
+.primary.outline:not(.disabled) {
   background-color: white;
   color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
   border: 1px solid hsl(var(--primary-h), var(--primary-s), var(--primary-l));
 }
 
-.primary:hover.outline {
+.primary:hover.outline:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--primary-h),
     var(--primary-s),
@@ -107,13 +108,14 @@
   );
 }
 
-.primary.text {
+.primary.text:not(.disabled) {
   background-color: white;
   color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
   box-shadow: none;
 }
 
-.primary:hover.text {
+.primary:hover.text:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--primary-h),
     var(--primary-s),
@@ -122,7 +124,7 @@
   box-shadow: none;
 }
 
-.secondary.default {
+.secondary.default:not(.disabled) {
   background-color: hsl(
     var(--secondary-h),
     var(--secondary-s),
@@ -130,32 +132,35 @@
   );
   color: var(--secondary-text);
 }
-.secondary:hover.default {
+.secondary:hover.default:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--secondary-h),
     var(--secondary-s),
     clamp(30%, calc(var(--secondary-l) - 5%), 85%)
   );
 }
-.secondary.outline {
+.secondary.outline:not(.disabled) {
   background-color: white;
   color: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
   border: 1px solid
     hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
 }
-.secondary:hover.outline {
+.secondary:hover.outline:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--secondary-h),
     var(--secondary-s),
     clamp(30%, calc(var(--secondary-l) + 45%), 85%)
   );
 }
-.secondary.text {
+.secondary.text:not(.disabled) {
   background-color: white;
   color: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
   box-shadow: none;
 }
-.secondary:hover.text {
+.secondary:hover.text:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--secondary-h),
     var(--secondary-s),
@@ -164,35 +169,38 @@
   box-shadow: none;
 }
 
-.danger.default {
+.danger.default:not(.disabled) {
   background-color: hsl(var(--danger-h), var(--danger-s), var(--danger-l));
   color: var(--danger-text);
 }
-.danger:hover.default {
+.danger:hover.default:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--danger-h),
     var(--danger-s),
     clamp(30%, calc(var(--danger-l) - 5%), 85%)
   );
 }
-.danger.outline {
+.danger.outline:not(.disabled) {
   background-color: white;
   color: hsl(var(--danger-h), var(--danger-s), var(--danger-l));
   border: 1px solid hsl(var(--danger-h), var(--danger-s), var(--danger-l));
 }
-.danger:hover.outline {
+.danger:hover.outline:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--danger-h),
     var(--danger-s),
     clamp(30%, calc(var(--danger-l) + 45%), 85%)
   );
 }
-.danger.text {
+.danger.text:not(.disabled) {
   background-color: white;
   color: hsl(var(--danger-h), var(--danger-s), var(--danger-l));
   box-shadow: none;
 }
-.danger:hover.text {
+.danger:hover.text:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--danger-h),
     var(--danger-s),
@@ -201,35 +209,38 @@
   box-shadow: none;
 }
 
-.success.default {
+.success.default:not(.disabled) {
   background-color: hsl(var(--success-h), var(--success-s), var(--success-l));
   color: var(--success-text);
 }
-.success:hover.default {
+.success:hover.default:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--success-h),
     var(--success-s),
     clamp(30%, calc(var(--success-l) - 5%), 85%)
   );
 }
-.success.outline {
+.success.outline:not(.disabled) {
   background-color: white;
   color: hsl(var(--success-h), var(--success-s), var(--success-l));
   border: 1px solid hsl(var(--success-h), var(--success-s), var(--success-l));
 }
-.success:hover.outline {
+.success:hover.outline:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--success-h),
     var(--success-s),
     clamp(30%, calc(var(--success-l) + 45%), 85%)
   );
 }
-.success.text {
+.success.text:not(.disabled) {
   background-color: white;
   color: hsl(var(--success-h), var(--success-s), var(--success-l));
   box-shadow: none;
 }
-.success:hover.text {
+.success:hover.text:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--success-h),
     var(--success-s),
@@ -238,35 +249,38 @@
   box-shadow: none;
 }
 
-.warning.default {
+.warning.default:not(.disabled) {
   background-color: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
   color: var(--warning-text);
 }
-.warning:hover.default {
+.warning:hover.default:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--warning-h),
     var(--warning-s),
     clamp(30%, calc(var(--warning-l) - 5%), 85%)
   );
 }
-.warning.outline {
+.warning.outline:not(.disabled) {
   background-color: white;
   color: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
   border: 1px solid hsl(var(--warning-h), var(--warning-s), var(--warning-l));
 }
-.warning:hover.outline {
+.warning:hover.outline:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--warning-h),
     var(--warning-s),
     clamp(30%, calc(var(--warning-l) + 45%), 85%)
   );
 }
-.warning.text {
+.warning.text:not(.disabled) {
   background-color: white;
   color: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
   box-shadow: none;
 }
-.warning:hover.text {
+.warning:hover.text:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--warning-h),
     var(--warning-s),
@@ -275,35 +289,38 @@
   box-shadow: none;
 }
 
-.info.default {
+.info.default:not(.disabled) {
   background-color: hsl(var(--info-h), var(--info-s), var(--info-l));
   color: var(--info-text);
 }
-.info:hover.default {
+.info:hover.default:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--info-h),
     var(--info-s),
     clamp(30%, calc(var(--warning-l) - 5%), 85%)
   );
 }
-.info.outline {
+.info.outline:not(.disabled) {
   background-color: white;
   color: hsl(var(--info-h), var(--info-s), var(--info-l));
   border: 1px solid hsl(var(--info-h), var(--info-s), var(--info-l));
 }
-.info:hover.outline {
+.info:hover.outline:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--info-h),
     var(--info-s),
     clamp(30%, calc(var(--info-l) + 45%), 85%)
   );
 }
-.info.text {
+.info.text:not(.disabled) {
   background-color: white;
   color: hsl(var(--info-h), var(--info-s), var(--info-l));
   box-shadow: none;
 }
-.info:hover.text {
+.info:hover.text:not(.disabled) {
+  cursor: pointer;
   background-color: hsl(
     var(--info-h),
     var(--info-s),
@@ -312,11 +329,7 @@
   box-shadow: none;
 }
 
-.disabled:hover {
-  cursor: auto;
-}
-
-.disabled {
+.default.disabled {
   background-color: hsl(
     var(--disabled-h),
     var(--disabled-s),
@@ -326,11 +339,14 @@
 }
 .text.disabled {
   background-color: #ffffff !important;
-  color: var(--disabled-text);
-  box-shadow: none;
+  color: var(--disabled-text) !important;
+  box-shadow: none !important;
 }
 .outline.disabled {
   background-color: #ffffff !important;
   color: var(--disabled-text);
-  border: 1px solid var(--disabled-text);
+  border: 1px solid var(--disabled-text) !important;
+}
+.disabled:hover {
+  cursor: default !important;
 }
