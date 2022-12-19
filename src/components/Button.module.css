@@ -105,6 +105,7 @@
 .primary.text {
   background-color: white;
   color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  box-shadow: none;
 }
 
 .primary:hover.text {
@@ -113,6 +114,7 @@
     var(--primary-s),
     clamp(30%, calc(var(--primary-l) + 45%), 85%)
   );
+  box-shadow: none;
 }
 
 .secondary.default {
@@ -146,6 +148,7 @@
 .secondary.text {
   background-color: white;
   color: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+  box-shadow: none;
 }
 .secondary:hover.text {
   background-color: hsl(
@@ -153,6 +156,7 @@
     var(--secondary-s),
     clamp(30%, calc(var(--secondary-l) + 45%), 85%)
   );
+  box-shadow: none;
 }
 
 .danger.default {
@@ -181,6 +185,7 @@
 .danger.text {
   background-color: white;
   color: hsl(var(--danger-h), var(--danger-s), var(--danger-l));
+  box-shadow: none;
 }
 .danger:hover.text {
   background-color: hsl(
@@ -188,6 +193,7 @@
     var(--danger-s),
     clamp(30%, calc(var(--danger-l) + 45%), 85%)
   );
+  box-shadow: none;
 }
 
 .success.default {
@@ -216,6 +222,7 @@
 .success.text {
   background-color: white;
   color: hsl(var(--success-h), var(--success-s), var(--success-l));
+  box-shadow: none;
 }
 .success:hover.text {
   background-color: hsl(
@@ -223,6 +230,7 @@
     var(--success-s),
     clamp(30%, calc(var(--success-l) + 45%), 85%)
   );
+  box-shadow: none;
 }
 
 .warning.default {
@@ -251,6 +259,7 @@
 .warning.text {
   background-color: white;
   color: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
+  box-shadow: none;
 }
 .warning:hover.text {
   background-color: hsl(
@@ -258,6 +267,7 @@
     var(--warning-s),
     clamp(30%, calc(var(--warning-l) + 45%), 85%)
   );
+  box-shadow: none;
 }
 
 .info.default {
@@ -286,6 +296,7 @@
 .info.text {
   background-color: white;
   color: hsl(var(--info-h), var(--info-s), var(--info-l));
+  box-shadow: none;
 }
 .info:hover.text {
   background-color: hsl(
@@ -293,4 +304,5 @@
     var(--info-s),
     clamp(30%, calc(var(--info-l) + 45%), 85%)
   );
+  box-shadow: none;
 }
