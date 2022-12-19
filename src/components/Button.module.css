@@ -34,6 +34,11 @@
   --info-l: 54%;
   --info-text: #ffffff;
 
+  --disabled-h: 0;
+  --disabled-s: 0%;
+  --disabled-l: 53%;
+  --disabled-text: rgba(3, 3, 3, 0.5);
+
   --shadow: hsl(0, 0%, 53%);
 }
 .base {
@@ -305,4 +310,27 @@
     clamp(30%, calc(var(--info-l) + 45%), 85%)
   );
   box-shadow: none;
+}
+
+.disabled:hover {
+  cursor: auto;
+}
+
+.disabled {
+  background-color: hsl(
+    var(--disabled-h),
+    var(--disabled-s),
+    var(--disabled-l)
+  ) !important;
+  color: var(--disabled-text) !important;
+}
+.text.disabled {
+  background-color: #ffffff !important;
+  color: var(--disabled-text);
+  box-shadow: none;
+}
+.outline.disabled {
+  background-color: #ffffff !important;
+  color: var(--disabled-text);
+  border: 1px solid var(--disabled-text);
 }

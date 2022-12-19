@@ -16,6 +16,19 @@ const Home = () => {
         <Button type="text">text</Button>
       </div>
       <br />
+      disabled
+      <div>
+        <Button type="default" disabled={true}>
+          default
+        </Button>
+        <Button type="outline" disabled={true}>
+          outline
+        </Button>
+        <Button type="text" disabled={true}>
+          text
+        </Button>
+      </div>
+      <br />
       Color
       <div>
         <Button color="primary">primary</Button>
