@@ -9,16 +9,39 @@ const Button = ({
   shadow,
   startIcon,
   endIcon,
+  autofocus,
+  disabled,
+  form,
+  formaction,
+  formenctype,
+  formmethod,
+  formnovalidate,
+  formtarget,
+  name,
+  value,
   children,
 }) => {
   const classname = `${styles.base} ${styles[size]} ${styles[type]} ${
     styles[color]
   } ${styles[shadow ? "shadow" : ""]}`;
   return (
-    <button className={classname}>
+    //pass button attributes
+    <button
+      className={classname}
+      autoFocus={autofocus}
+      disabled={disabled}
+      form={form}
+      formAction={formaction}
+      formEncType={formenctype}
+      formMethod={formmethod}
+      formNoValidate={formnovalidate}
+      formTarget={formtarget}
+      name={name}
+      value={value}
+    >
       {startIcon && <span className="material-icons"> {startIcon} </span>}
       <div>{children}</div>
-      {endIcon && <span className="material-icons"> {endIcon} </span>}
+      {endIcon && <span className="material-icons">{endIcon}</span>}
     </button>
   );
 };
@@ -29,6 +52,16 @@ Button.defaultProps = {
   type: "default",
   color: "primary",
   shadow: true,
+  autofocus: false,
+  disabled: false,
+  form: "",
+  formaction: "",
+  formenctype: "",
+  formmethod: "",
+  formnovalidate: false,
+  formtarget: "",
+  name: "",
+  value: "",
 };
 Button.prototype = {
   type: PropTypes.oneOf(["text", "default", "outline"]),
@@ -44,4 +77,14 @@ Button.prototype = {
   shadow: PropTypes.bool,
   startIcon: PropTypes.string,
   endIcon: PropTypes.string,
+  autofocus: PropTypes.bool,
+  disabled: PropTypes.bool,
+  form: PropTypes.string,
+  formaction: PropTypes.string,
+  formenctype: PropTypes.string,
+  formmethod: PropTypes.string,
+  formnovalidate: PropTypes.bool,
+  formtarget: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.string,
 };
